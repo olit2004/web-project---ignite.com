@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <title>Ignite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- nav bar tha tis resppnsive      -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="./ignite logo.svg" alt="ignite logo">
+                <a href="index.html" >Ignite  <span>Academy</span> </a>
+            </div>
+             
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+             <div class="nav-content">
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About-us</a></li>
+                    <li><a href="contactUs.html">Contact-us</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+
+<!-- the hero section  -->
+
+<section class="hero">
+
+<div class="container hero-glass">
+      <h1>Launch Your Tech Career Today</h1>
+      <p>Join Ignite. Learn with peers, build real projects, and launch your dream career.</p>
+      <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+    </div>
+</section>
+
+<!-- what choose as section  -->
+<section class="section ">
+  <div class="container">
+    <h2>Why Choose Ignite?</h2>
+    <div class="feature-container">
+      <div class="feature-card">
+        <img src="./computer.svg" alt="hands on project">
+        <h3>Hands-on Learning</h3>
+        <p>Build real-world projects you can showcase in your portfolio. </p>
+      </div>
+      <div class="feature-card">
+         <img src="./expert.svg" alt="experts">
+        <h3>Expert Mentors</h3>
+        <p>Learn directly from industry professionalsand instructors with experience at major tech companies, ensuring practical, job-ready guidance.</p>
+      </div>
+      <div class="feature-card">
+        <picture>
+               <img src="./careerLogo.svg" alt=" career">
+        </picture>      
+
+        <h3>Career Support</h3>
+        <p>From resume reviews to mock interviews, Ignite helps you land your dream job. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- // testimonaials -->
+
+  <section class="section bg-light">
+    <div class="container">
+      <h2> Success Stories</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Ignite completely changed my life. I went from a barista to a Software Engineer at a Fortune 500 company in just 6 months. The mentors are incredible."</p>
+          <p class="testimonial-author">- Sarah Jenkins, Class of '22</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The curriculum is tough but worth it. The focus on real-world projects meant I had a portfolio ready to show employers immediately."</p>
+          <p class="testimonial-author">- Michael Chen, Frontend Dev</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>Ignite Academy</h3>
+          <p>Empowering the next generation of developers through immersive education.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>hello@ignite.edu</li>
+            <li>1-800-CODE-NOW</li>
+            <li>123 5 kilo San Francisco</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Ignite Academy. All rights reserved.
+      </div>
+    </div>
+</footer>  
+
+
+<script>
+    // logic for toggling the menu 
+    const menuToggle = document.getElementById("menu-toggle")
+    const navContent =document.querySelector(".nav-content");
+    menuToggle.addEventListener('click', () => {
+    navContent.classList.toggle("active");
+  });
+
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split("/").pop(); 
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+
+
+    
+</script>    
+</body>
+</html>

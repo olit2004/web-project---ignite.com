@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <title>Ignite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- nav bar that is resppnsive      -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="./ignite logo.svg" alt="ignite logo">
+                <a href="index.html" >Ignite  <span>Academy</span> </a>
+            </div>
+             
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+             <div class="nav-content">
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About-us</a></li>
+                    <li><a href="contactUs.html">Contact-us</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <!-- our misson and about us sections -->
+
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="about-conatiner">
+        <div>
+         <h2> Our Mission</h2>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit iste optio earum reprehenderit quasi exercitationem, iure atque ducimus facere hic?</p>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, cumque at ipsa nihil, fugit pariatur sequi nulla, fuga soluta ut amet. Quos nisi culpa officia.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime laboriosam ipsum architecto porro eius a tempore natus fugiat mollitia amet!</p>
+        
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit iste optio earum reprehenderit quasi exercitationem, iure atque ducimus facere hic?</p>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, cumque at ipsa nihil, fugit pariatur sequi nulla, fuga soluta ut amet. Quos nisi culpa officia.</p>
+    
+    </div>
+        <picture class="team-work">
+        <img src="https://i.pinimg.com/736x/d1/24/37/d124377275763f1644c8f97efd8fdb89.jpg" alt="">
+        </picture>
+    </div>
+
+
+  </div>
+
+</section>    
+
+
+    <!-- footer section -->
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>Ignite Academy</h3>
+          <p>Empowering the next generation of developers through immersive education.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>hello@ignite.edu</li>
+            <li>1-800-CODE-NOW</li>
+            <li>123 5 kilo Addis Ababa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Ignite Academy. All rights reserved.
+      </div>
+    </div>
+</footer>  
+
+
+<script>
+    // logic for toggling the menu 
+    const menuToggle = document.getElementById("menu-toggle")
+    const navContent =document.querySelector(".nav-content");
+    menuToggle.addEventListener('click', () => {
+    navContent.classList.toggle("active");
+  });
+
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split("/").pop(); // e.g. "courses.html"
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+
+    
+</script>    
+</body>
+</html>

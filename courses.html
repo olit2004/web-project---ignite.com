@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <title>Ignite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- nav bar that is resppnsive      -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="./ignite logo.svg" alt="ignite logo">
+                <a href="index.html" >Ignite  <span>Academy</span> </a>
+            </div>
+             
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+             <div class="nav-content">
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About-us</a></li>
+                    <li><a href="contactUs.html">Contact-us</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+
+ <!-- courses list -->
+ <section class="section">
+  <div class="container">
+    <h2>Courses We Provide</h2>
+    <div class="courses-container">
+
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img src="https://i.pinimg.com/736x/64/d0/fb/64d0fbc6e0967e57aa30695b28dde06e.jpg" alt="Operating Systems Development">
+        </div>
+        <div class="course-content">
+          <div class="course-meta"><span>16 Weeks</span><span>Full-Time</span></div>
+          <h3>Operating Systems Development</h3>
+          <p>Design and implement core OS components: process scheduling, memory management, and device drivers.</p>
+          <a href="#" style="color:blueviolet;text-align:center">View Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Compiler Design & Development">
+        </div>
+        <div class="course-content">
+          <div class="course-meta"><span>12 Weeks</span><span>Full-Time</span></div>
+          <h3>Compiler Design & Development</h3>
+          <p>Learn language theory and build compilers: parsing, optimization, and code generation.</p>
+          <a href="#" style="color:blueviolet;text-align:center">View Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Full-Stack Web Development">
+        </div>
+        <div class="course-content">
+          <div class="course-meta"><span>12 Weeks</span><span>Full-Time</span></div>
+          <h3>Full-Stack Web Development</h3>
+          <p>Master front-end and back-end technologies to build scalable web applications from scratch.</p>
+          <a href="#" style="color:blueviolet;text-align:center">View Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img src="https://i.pinimg.com/736x/37/2f/ea/372fea679e94e69229518817361a3d40.jpg" alt="Software Architecture & Design Patterns">
+        </div>
+        <div class="course-content">
+          <div ><span>10 Weeks</span><span>Part-Time</span></div>
+          <h3>Software Architecture & Design Patterns</h3>
+          <p>Learn modular design, microservices, and proven design patterns for enterprise-grade systems.</p>
+          <a href="#" style="color:blueviolet;text-align:center">View Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Distributed Systems & Cloud Engineering">
+        </div>
+        <div class="course-content">
+          <div class="course-meta"><span>20 Weeks</span><span>Online</span></div>
+          <h3>Distributed Systems & Cloud Engineering</h3>
+          <p>Build scalable systems with concurrency, networking, and cloud platforms like AWS and Kubernetes.</p>
+          <a href="#" style="color:blueviolet;text-align:center">View Syllabus</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- footer section -->
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>Ignite Academy</h3>
+          <p>Empowering the next generation of developers through immersive education.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>hello@ignite.edu</li>
+            <li>1-800-CODE-NOW</li>
+            <li>123 5 kilo Addis Ababa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Ignite Academy. All rights reserved.
+      </div>
+    </div>
+</footer>  
+
+
+<script>
+    // logic for toggling the menu 
+    const menuToggle = document.getElementById("menu-toggle")
+    const navContent =document.querySelector(".nav-content");
+    menuToggle.addEventListener('click', () => {
+    navContent.classList.toggle("active");
+  });
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split("/").pop(); // e.g. "courses.html"
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+
+    
+</script>    
+</body>
+</html>
