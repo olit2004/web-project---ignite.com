@@ -161,12 +161,15 @@ img {
   cursor: pointer;
 }
 
+
+/* hero section */
+
 .hero {
     background: linear-gradient(
         rgba(15, 23, 42, 0.4),
         rgba(15, 23, 42, 0.3)
       ),
-      url("https://i.pinimg.com/1200x/06/76/f3/0676f303d8fa3b39b2ca538e174840df.jpg");
+      url("Assets/backGround.jpg");
 
     background-size: cover;
     background-position: center;
@@ -178,6 +181,8 @@ img {
  
 }
 
+
+/* the glass morphism  design of hero content  */
 .hero-glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
@@ -189,6 +194,10 @@ img {
    text-align: center;
   color: #eee;
 }
+
+
+/* why choose us section design  */
+
 
 .feature-container{
     display: grid;
