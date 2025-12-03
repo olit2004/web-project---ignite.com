@@ -1,6 +1,6 @@
-/* --------------------------------------------- */
-/*                    VARIABLES                  */
-/* --------------------------------------------- */
+
+/* variables   */
+
 
 :root {
   --bg-body: #f8fafc;
@@ -16,10 +16,6 @@
   --bg-card: white;
   --radius:0.5rem;
 }
-
-/* --------------------------------------------- */
-/*                    GLOBAL                     */
-/* --------------------------------------------- */
 
 body {
   margin: 0;
@@ -77,11 +73,16 @@ img {
   padding: 4rem 0;
 }
 
+
+/* general container style */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
+
+
+/* navigation style */
 
 .navbar {
   background-color: var(--bg-nav);
